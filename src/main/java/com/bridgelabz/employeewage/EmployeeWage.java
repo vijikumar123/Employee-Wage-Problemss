@@ -28,10 +28,34 @@ public class EmployeeWage {
         employeeWage=employeeHrs * employeeWagePerHour;
         System.out.println("Employee Wage " + employeeWage);
     }
+
+    void dailyEmployeePartTimeWage() {
+        int fullTime=2;
+        int partTime=1;
+        int employeeWagePerHour=20;
+        int employeeHrs=0;
+        int employeeWage=0;
+
+        double employeeCheck = Math.floor(Math.random() * 10) % 3;
+        if ( employeeCheck == fullTime)
+            employeeHrs=16;
+        else if
+        ( employeeCheck == partTime)
+            employeeHrs=8;
+        else
+            employeeHrs=0;
+
+        employeeWage=employeeHrs * employeeWagePerHour;
+        System.out.println("Employee Wage " + employeeWage);
+    }
+
     public static void main(String[] args) {
         EmployeeWage Emp = new EmployeeWage();
         	Emp.checkEmployeeAttendence();
-        Emp.dailyEmployeeWage();
+        //Emp.dailyEmployeeWage();
+        Emp.dailyEmployeePartTimeWage();
 
     }
+
+
 }
