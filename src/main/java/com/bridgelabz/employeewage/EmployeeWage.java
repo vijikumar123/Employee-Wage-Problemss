@@ -28,8 +28,6 @@ public class EmployeeWage {
         employeeWage=employeeHrs * employeeWagePerHour;
         System.out.println("Employee Wage " + employeeWage);
     }
-
-
     public static void main(String[] args) {
         EmployeeWage Emp = new EmployeeWage();
         	Emp.checkEmployeeAttendence();
