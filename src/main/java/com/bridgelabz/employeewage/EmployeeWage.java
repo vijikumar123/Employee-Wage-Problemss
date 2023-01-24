@@ -1,18 +1,39 @@
 package com.bridgelabz.employeewage;
 
-public class EmployeeWage {
-    public static void main(String[] args) {
-        System.out.println("Welcome to Employee Wages");
-        int IS_FULL_TIME = 1;
+import java.util.Scanner;
 
-        double employeeChek =  (int)(Math.random()*2);
-        System.out.println("employeeChek");
-        if(employeeChek == IS_FULL_TIME) {
+public class EmployeeWage {
+    void checkEmployeeAttendence() {
+        int IS_FULL_TIME = 1;
+        double empCheck = Math.floor(Math.random() * 10) % 2;
+
+        if (empCheck == IS_FULL_TIME)
             System.out.println("Employee is Present");
-        }else
-        {
-            System.out.println("Employee is absent");
-        }
+        else
+            System.out.println("Employee is Absent");
     }
 
+    void dailyEmployeeWage() {
+        int fullTime=1;
+        int employeeWagePerHour=20;
+        int employeeHrs=0;
+        int employeeWage=0;
+
+        double employeeCheck = Math.floor(Math.random() * 10) % 2;
+        if ( employeeCheck == fullTime)
+            employeeHrs=8;
+        else
+            employeeHrs=0;
+
+        employeeWage=employeeHrs * employeeWagePerHour;
+        System.out.println("Employee Wage " + employeeWage);
+    }
+
+
+    public static void main(String[] args) {
+        EmployeeWage Emp = new EmployeeWage();
+        	Emp.checkEmployeeAttendence();
+        Emp.dailyEmployeeWage();
+
+    }
 }
